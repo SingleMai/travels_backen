@@ -6,6 +6,7 @@ const Login = resolve => { import('components/Login').then(module => { resolve(m
 const Users = resolve => { import('components/Users').then(module => { resolve(module) }) }
 const Travels = resolve => { import('components/Travels').then(module => { resolve(module) }) }
 const Servers = resolve => { import('components/Servers').then(module => { resolve(module) }) }
+const Orders = resolve => { import('components/Orders').then(module => { resolve(module) }) }
 const Validate = resolve => { import('components/Validate').then(module => { resolve(module) }) }
 
 Vue.use(Router)
@@ -30,6 +31,11 @@ export default new Router({
           path: '/servers',
           name: 'Servers',
           component: Servers
+        },
+        {
+          path: 'orders',
+          name: 'Orders',
+          component: Orders
         },
         {
           path: '/travels',
