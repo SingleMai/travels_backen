@@ -135,27 +135,7 @@ export default {
       }
     },
     async closeDialog (done) {
-      // 用户并没有编辑过内容，则直接跳过
-      if (isEmptyObject(this.currentItem)) {
-        this.resetDate()
-        return
-      }
-      // 利用是否存在id来判断是更新操作还是新增操作
-      // 如果存在id，则表明该操作是更新操作，那么关闭弹窗需要判断内容是否被编辑过
-      if (this.currentItem.id) {
-        if (isObjEqual(this.currentItem, this.data[this.currentInex])) {
-          this.resetDate()
-          return
-        }
-      }
-      try {
-        await this.$confirm('编辑的内容还未更新, 是否确定退出?', '提示', {
-          confirmButtonText: '确定',
-          cancelButtonText: '取消',
-          type: 'warning'
-        })
-        this.resetDate()
-      } catch (err) { }
+      this.resetDate()
     },
     async $_getData () {
       const data = await CarouselApi.getCarousel()

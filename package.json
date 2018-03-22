@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "name": "travels_front",
-=======
   "name": "travels_backen",
->>>>>>> 85dd75f138c9e9142230004ec3f8dee5e1ba363c
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "singlemai <422107224@qq.com>",
@@ -15,22 +11,12 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "node-sass": "^4.7.2",
-    "sass-loader": "^6.0.6",
-    "vue": "^2.5.2",
-    "vue-html5-editor": "^1.1.1",
-    "vue-router": "^3.0.1",
-    "vuex": "^3.0.1",
-    "vux": "^2.7.9"
-=======
     "axios": "^0.18.0",
     "element-ui": "^2.0.11",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
->>>>>>> 85dd75f138c9e9142230004ec3f8dee5e1ba363c
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
