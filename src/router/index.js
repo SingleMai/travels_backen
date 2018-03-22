@@ -4,6 +4,7 @@ import Router from 'vue-router'
 const Index = resolve => { import('components/Index').then(module => { resolve(module) }) }
 const Login = resolve => { import('components/Login').then(module => { resolve(module) }) }
 const Users = resolve => { import('components/Users').then(module => { resolve(module) }) }
+const Carousel = resolve => { import('components/Carousel').then(module => { resolve(module) }) }
 const Travels = resolve => { import('components/Travels').then(module => { resolve(module) }) }
 const Servers = resolve => { import('components/Servers').then(module => { resolve(module) }) }
 const Orders = resolve => { import('components/Orders').then(module => { resolve(module) }) }
@@ -22,6 +23,11 @@ export default new Router({
       name: 'Index',
       component: Index,
       children: [
+        {
+          path: '/carousel',
+          name: 'Carousel',
+          component: Carousel
+        },
         {
           path: '/users',
           name: 'Users',

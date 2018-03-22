@@ -6,6 +6,9 @@
         :router="true"
         class="el-menu-vertical-demo"
       >
+        <el-menu-item index="/carousel">
+          <span slot="title">轮播图管理</span>
+        </el-menu-item>
         <el-menu-item index="/users">
           <span slot="title">用户管理</span>
         </el-menu-item>

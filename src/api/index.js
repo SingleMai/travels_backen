@@ -7,6 +7,7 @@ import * as travels from './src/travels'
 export const UserApi = user
 export const ServersApi = servers
 export const TravelsApi = travels
+export { CarouselApi } from './src/carousel'
 
 // 拦截request，如果有token字段，则添加token到header
 axios.interceptors.request.use(
