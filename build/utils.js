@@ -29,9 +29,22 @@ exports.cssLoaders = function (options) {
     }
   }
 
+<<<<<<< HEAD
+  const px2remLoader = {
+    loader: 'px2rem-loader',
+    options: {
+      remUnit: 64//设计稿宽度/10
+    }
+  };
+
+  // generate loader string to be used with extract text plugin
+  function generateLoaders (loader, loaderOptions) {
+    const loaders = options.usePostCSS ? [cssLoader, postcssLoader, px2remLoader] : [cssLoader, px2remLoader]
+=======
   // generate loader string to be used with extract text plugin
   function generateLoaders (loader, loaderOptions) {
     const loaders = options.usePostCSS ? [cssLoader, postcssLoader] : [cssLoader]
+>>>>>>> 85dd75f138c9e9142230004ec3f8dee5e1ba363c
 
     if (loader) {
       loaders.push({

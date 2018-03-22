@@ -1,4 +1,20 @@
 import axios from 'axios'
+<<<<<<< HEAD
+import * as Travels from 'api/src/travels'
+import * as Users from 'api/src/users'
+import * as Carousel from 'api/src/carousel'
+import * as Servies from 'api/src/servies'
+import * as Orders from 'api/src/orders'
+import * as Chat from 'api/src/chat'
+
+export const TravelsApi = Travels
+export const UsersApi = Users
+export const CarouselApi = Carousel
+export const ServiesApi = Servies
+export const OrdersApi = Orders
+export const ChatApi = Chat
+
+=======
 import router from '../router'
 import * as user from './src/user'
 import * as servers from './src/servers'
@@ -10,6 +26,7 @@ export const TravelsApi = travels
 export { CarouselApi } from './src/carousel'
 
 // 拦截request，如果有token字段，则添加token到header
+>>>>>>> 85dd75f138c9e9142230004ec3f8dee5e1ba363c
 axios.interceptors.request.use(
   config => {
     const token = window.localStorage.getItem('token')
@@ -54,6 +71,23 @@ axios.interceptors.response.use((response) => {
         result.message = '新增内容已存在'
         break
 
+<<<<<<< HEAD
+      case -7:
+        result.message = '邮箱未注册'
+        break
+
+      case -8:
+        result.message = '验证码错误'
+        break
+
+      case -9:
+        result.message = '身份验证错误，请重新登录'
+        window.localStorage.removeItem('token')
+        window.localStorage.removeItem('user')
+        break
+
+      case -5000:
+=======
       case -4:
         result.message = '该优先级已被使用'
         break
@@ -108,6 +142,7 @@ axios.interceptors.response.use((response) => {
         break
 
       case -4000:
+>>>>>>> 85dd75f138c9e9142230004ec3f8dee5e1ba363c
         result.message = '后台服务出错'
         break
 

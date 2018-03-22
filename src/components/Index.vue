@@ -1,4 +1,9 @@
 <template>
+<<<<<<< HEAD
+  <div class="content">
+    <router-view class="barHeight"></router-view>
+    <tar-bar :v-show="getShowBar"></tar-bar>
+=======
   <div>
     <div class="menu-box">
       <el-menu
@@ -29,10 +34,29 @@
     <div class="content">
       <router-view/>
     </div>
+>>>>>>> 85dd75f138c9e9142230004ec3f8dee5e1ba363c
   </div>
 </template>
 
 <script>
+<<<<<<< HEAD
+import TarBar from 'base/TarBar'
+import { mapGetters } from 'vuex'
+
+export default {
+  name: 'Index',
+  data () {
+    return {
+    }
+  },
+  computed: {
+    ...mapGetters([
+      'getShowBar'
+    ])
+  },
+  components: {
+    TarBar
+=======
 
 export default {
   data () {
@@ -42,12 +66,22 @@ export default {
     }
   },
   methods: {
+>>>>>>> 85dd75f138c9e9142230004ec3f8dee5e1ba363c
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped="" type="text/css">
+<<<<<<< HEAD
+@import "src/common/sass/variable.sass";
+
+.content {
+  position: relative;
+  .barHeight {
+    margin-bottom: $tar-bar-height;
+  }
+=======
 $menuWidth: 250px;
 .menu-box {
   position: fixed;
@@ -75,5 +109,6 @@ $menuWidth: 250px;
   margin-left: $menuWidth;
   box-sizing: border-box;
   padding: 20px;
+>>>>>>> 85dd75f138c9e9142230004ec3f8dee5e1ba363c
 }
 </style>

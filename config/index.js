@@ -11,6 +11,12 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
+<<<<<<< HEAD
+      '/api/**': {
+        target: 'http://localhost:7001', // 你接口的域名
+        secure: false,      // 如果是https接口，需要配置这个参数
+        changeOrigin: true,     // 如果接口跨域，需要进行这个参数配置  
+=======
       '/backen/**': {
         target: 'http://localhost:7001', // 你接口的域名
         secure: false,      // 如果是https接口，需要配置这个参数
@@ -20,11 +26,16 @@ module.exports = {
         target: 'http://localhost:7001',
         secure: false,
         changeOrigin: true,
+>>>>>>> 85dd75f138c9e9142230004ec3f8dee5e1ba363c
       }
     },
 
     // Various Dev Server settings
+<<<<<<< HEAD
+    host: '0.0.0.0', // can be overwritten by process.env.HOST
+=======
     host: 'localhost', // can be overwritten by process.env.HOST
+>>>>>>> 85dd75f138c9e9142230004ec3f8dee5e1ba363c
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
@@ -56,12 +67,21 @@ module.exports = {
 
   build: {
     // Template for index.html
+<<<<<<< HEAD
+    index: path.resolve(__dirname, '../../travels_admin/app/public', 'dist/index.html'),
+
+    // Paths
+    assetsRoot: path.resolve(__dirname, '../../travels_admin/app/public', 'dist'),
+    assetsSubDirectory: 'static',
+    assetsPublicPath: '/public/dist/',
+=======
     index: path.resolve(__dirname, '../dist/index.html'),
 
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
+>>>>>>> 85dd75f138c9e9142230004ec3f8dee5e1ba363c
 
     /**
      * Source Maps
