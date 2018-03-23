@@ -66,6 +66,7 @@
   </div>
 </template>
 <script>
+import { noConcurrent } from 'js/decoration'
 import { CarouselApi } from 'api'
 
 export default {
@@ -118,6 +119,7 @@ export default {
         this.$message.error(`删除轮播图信息失败:  ${err.message}`)
       }
     },
+    @noConcurrent
     async confirmDialog (formName) {
       await this.$refs[formName].validate()
       try {
@@ -126,7 +128,7 @@ export default {
         formData.append('link', this.currentItem.link)
         formData.append('carousel', this.currentItem.carousel)
 
-        const result = await CarouselApi.createCarousel(formData)
+        await CarouselApi.createCarousel(formData)
         await this.$_getData()
         this.resetDate()
         this.$message.success(`添加轮播图信息成功！`)
